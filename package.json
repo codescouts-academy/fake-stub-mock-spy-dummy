@@ -1,0 +1,33 @@
+{
+  "name": "fake-stub-mock-spy-dummy",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene ejemplos para diferenciar estos conceptos",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "roots": [
+      "src"
+    ],
+    "testMatch": [
+      "/__tests__/.*\\.(ts|tsx|js)",
+      "**/?(*.)(spec|test).ts?(x)"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": false
+  },
+  "devDependencies": {
+    "typescript": "^3.3.3",
+    "@types/typescript": "^2.0.0",
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0"
+  }
+}
