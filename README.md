@@ -1,7 +1,7 @@
 # Test dobles
 
 Los test dobles hacen alusión a los dobles en hollywood donde un actor que tiene que hacer una escena riesgosa contrata un doble para que la realice; En los tests tenemos exactamente lo mismo.
-Estos dobles de test nos permitirán cambiar su implementación dependiendo el escenario que necesitemos testear, cada uno de ellos tiene una forma y un objetivo de uso.
+Estos dobles de test nos permitirán cambiar su implementación dependiendo el escenario que necesitemos testar, cada uno de ellos tiene una forma y un objetivo de uso.
 Cada vez que preguntamos en nuestras sesiones si saben la diferencia, siempre se confunden estos conceptos, así que en este post intentaré que te quede claro de una vez por todas, vamos! 🚀
 
 ## Dummy
@@ -113,7 +113,7 @@ Los Stubs debemos utilizarlo cuando queremos tener diferentes implementaciones d
 
 ### ¿Qué es un Spy?
 
-Un Spy es un Stub que tiene la habilidad de cambiar el valor de respuesta cada vez que nosotros queramos dependiendo el path que estemos testeando de nuestro código. Sin embargo los Spies tienen la habilidad también de recordar la cantidad de veces que ha sido llamado un determinado método o incluso recordar los valores con los que lo hemos utilizado.
+Un Spy es un Stub que tiene la habilidad de cambiar el valor de respuesta cada vez que nosotros queramos dependiendo el path que estemos testando de nuestro código. Sin embargo los Spies tienen la habilidad también de recordar la cantidad de veces que ha sido llamado un determinado método o incluso recordar los valores con los que lo hemos utilizado.
 
 Por ejemplo implementemos un Spy del caso que venimos viendo
 
@@ -152,7 +152,7 @@ export class AuthenticationSpy implements Authenticator {
 ```
 
 ```typescript
-test("when the user try to authenticate the authorizer authentication call once time", ()=> {
+test("the user try to authenticate the authorizer authentication call once time", ()=> {
     const authenticationSpy= new AuthenticationSpy();
     authenticationSpy.changeResult(true);
 
@@ -175,7 +175,7 @@ En caso que nosotros necesitemos asegurar que una determinada función es llamad
 
 ### ¿Qué son los Mocks?
 
-Los Mocks son Spies que retornan valores especificos para cada tests, qué recuerdan cuantas veces y con qué argumentos se ha invocado una función, sin embargo los Mocks también saben si el test debe fallar o no dependiendo cómo se configure.
+Los Mocks son Spies que retornan valores específicos para cada tests, qué recuerdan cuantas veces y con qué argumentos se ha invocado una función, sin embargo los Mocks también saben si el test debe fallar o no dependiendo cómo se configure.
 En otras palabras las aserciones de los tests estarán escritas dentro del Mock.
 
 Por ejemplo miremos la implementación de este Mock.
@@ -266,6 +266,9 @@ Pero no me quiero ir sin antes dejarles un pequeño resumen.
 -   Mocks: Son Spies que tiene lógica de aserción internamente.
 -   Fake: Simuladores que tienen un determinado escenario de fallo o de aserción complejo o dependiente de un estado interno.
 
-Espero que les sirva esta explicación teórica y práctica.
+Espero que les sirva esta explicación teórica y práctica te dejo aquí el repositorio con el código para que puedas revisarlo con detenimiento.
+👉 [Repo](https://github.com/codescouts-academy/fake-stub-mock-spy-dummy)
 
-Si te gustó compártelo que nos ayudaría mucho a que les llegue a todo el mundo 🙏
+Si te gustó compártelo que nos ayudaría mucho a que les llegue a todo el mundo 👇
+
+Un saludo 👋
